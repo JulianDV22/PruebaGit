@@ -32,70 +32,44 @@ body {
     color: #555;
 }
 
-/* Contenido Principal */
-main {
-    padding: 20px;
-}
-
-section {
-    background-color: #fff;
-    padding: 20px;
-    margin-bottom: 20px;
-    border-radius: 5px;
-}
-
-section h2 {
-    color: #333;
-}
-
-section p {
-    color: #666;
-}
-
-/* Pie de Página */
-footer {
-    background-color: #333;
-    color: #fff;
-    text-align: center;
-    padding: 15px 0;
-    position: fixed;
-    width: 100%;
-    bottom: 0;
-}
-
-/* Responsividad */
-@media (max-width: 768px) {
-    .company-name {
-        font-size: 36px;
-    }
-
-    .slogan {
-        font-size: 18px;
-    }
-
-    .header {
-        padding: 30px 10px;
-    }
-}
-
-/* Estilos para la barra de navegación */
+/* Barra de Navegación */
 .navbar {
     background-color: #333;
     overflow: hidden;
+    position: relative; /* Para posicionar el botón de menú */
 }
 
+/* Botón de Menú Hamburguesa */
+.nav-toggle {
+    display: none; /* Oculto por defecto */
+    background: none;
+    border: none;
+    color: #fff;
+    font-size: 30px;
+    cursor: pointer;
+    padding: 14px 20px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 10; /* Asegura que esté por encima de otros elementos */
+}
+
+/* Lista de Navegación */
 .nav-list {
     list-style: none;
     margin: 0;
     padding: 0;
     display: flex;
     justify-content: center;
+    transition: max-height 0.3s ease-out;
 }
 
+/* Elementos de Navegación */
 .nav-item {
     position: relative;
 }
 
+/* Enlaces de Navegación */
 .nav-item a {
     display: block;
     color: #fff;
@@ -104,33 +78,54 @@ footer {
     text-decoration: none;
 }
 
+/* Efecto Hover en Enlaces */
 .nav-item a:hover {
     background-color: #575757;
 }
 
-/* Estilos para los menús desplegables */
-.dropdown-content {
-    display: none;
-    position: absolute;
-    background-color: #444;
-    min-width: 160px;
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-    z-index: 1;
+/* Sección de Servicios */
+.servicios {
+    display: none; /* Oculta por defecto */
+    padding: 20px;
+    background-color: #fff;
 }
 
-.dropdown-content li a {
-    color: #fff;
-    padding: 12px 16px;
-    text-decoration: none;
-    display: block;
-    text-align: left;
+.servicios.active {
+    display: block; /* Muestra la sección cuando tiene la clase 'active' */
 }
 
-.dropdown-content li a:hover {
-    background-color: #575757;
-}
+/* Responsividad */
+@media (max-width: 768px) {
+    /* Mostrar el botón de menú hamburguesa */
+    .nav-toggle {
+        display: block;
+    }
 
-/* Mostrar el menú desplegable al pasar el mouse */
-.dropdown:hover .dropdown-content {
-    display: block;
+    /* Ocultar la lista de navegación por defecto */
+    .nav-list {
+        flex-direction: column;
+        max-height: 0; /* Oculto */
+        overflow: hidden;
+        width: 100%;
+    }
+
+    /* Mostrar la lista de navegación cuando está activa */
+    .nav-list.active {
+        max-height: 500px; /* Valor suficientemente grande para mostrar todos los elementos */
+    }
+
+    /* Ajustar elementos de navegación */
+    .nav-item a {
+        text-align: left;
+        padding: 10px 20px;
+    }
+
+    /* Sección de Servicios en dispositivos móviles */
+    .servicios {
+        padding: 15px;
+    }
+
+    .servicios.active {
+        /* Opcional: agregar estilos adicionales para dispositivos móviles */
+    }
 }
