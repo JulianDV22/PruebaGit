@@ -32,48 +32,100 @@ body {
     color: #555;
 }
 
-/* Contenido Principal */
-main {
-    padding: 20px;
-}
-
-section {
-    background-color: #fff;
-    padding: 20px;
-    margin-bottom: 20px;
-    border-radius: 5px;
-}
-
-section h2 {
-    color: #333;
-}
-
-section p {
-    color: #666;
-}
-
-/* Pie de Página */
-footer {
+/* Barra de Navegación */
+.navbar {
     background-color: #333;
+    overflow: hidden;
+    position: relative; /* Para posicionar el botón de menú */
+}
+
+/* Botón de Menú Hamburguesa */
+.nav-toggle {
+    display: none; /* Oculto por defecto */
+    background: none;
+    border: none;
+    color: #fff;
+    font-size: 30px;
+    cursor: pointer;
+    padding: 14px 20px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 10; /* Asegura que esté por encima de otros elementos */
+}
+
+/* Lista de Navegación */
+.nav-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    transition: max-height 0.3s ease-out;
+}
+
+/* Elementos de Navegación */
+.nav-item {
+    position: relative;
+}
+
+/* Enlaces de Navegación */
+.nav-item a {
+    display: block;
     color: #fff;
     text-align: center;
-    padding: 15px 0;
-    position: fixed;
-    width: 100%;
-    bottom: 0;
+    padding: 14px 20px;
+    text-decoration: none;
+}
+
+/* Efecto Hover en Enlaces */
+.nav-item a:hover {
+    background-color: #575757;
+}
+
+/* Sección de Servicios */
+.servicios {
+    display: none; /* Oculta por defecto */
+    padding: 20px;
+    background-color: #fff;
+}
+
+.servicios.active {
+    display: block; /* Muestra la sección cuando tiene la clase 'active' */
 }
 
 /* Responsividad */
 @media (max-width: 768px) {
-    .company-name {
-        font-size: 36px;
+    /* Mostrar el botón de menú hamburguesa */
+    .nav-toggle {
+        display: block;
     }
 
-    .slogan {
-        font-size: 18px;
+    /* Ocultar la lista de navegación por defecto */
+    .nav-list {
+        flex-direction: column;
+        max-height: 0; /* Oculto */
+        overflow: hidden;
+        width: 100%;
     }
 
-    .header {
-        padding: 30px 10px;
+    /* Mostrar la lista de navegación cuando está activa */
+    .nav-list.active {
+        max-height: 500px; /* Valor suficientemente grande para mostrar todos los elementos */
+    }
+
+    /* Ajustar elementos de navegación */
+    .nav-item a {
+        text-align: left;
+        padding: 10px 20px;
+    }
+
+    /* Sección de Servicios en dispositivos móviles */
+    .servicios {
+        padding: 15px;
+    }
+
+    .servicios.active {
+        /* Opcional: agregar estilos adicionales para dispositivos móviles */
     }
 }
