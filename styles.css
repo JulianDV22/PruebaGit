@@ -1,5 +1,3 @@
-/* styles.css */
-
 /* Estilos generales */
 body {
     font-family: Arial, sans-serif;
@@ -107,6 +105,19 @@ body {
         max-height: 0; /* Oculto */
         overflow: hidden;
         width: 100%;
+
+    }
+
+    /* Mostrar la lista de navegación cuando está activa */
+    .nav-list.active {
+        max-height: 500px; /* Valor suficientemente grande para mostrar todos los elementos */
+    }
+
+    /* Ajustar elementos de navegación */
+    .nav-item a {
+        text-align: left;
+        padding: 10px 20px;
+
     }
 
     /* Mostrar la lista de navegación cuando está activa */
@@ -127,5 +138,45 @@ body {
 
     .servicios.active {
         /* Opcional: agregar estilos adicionales para dispositivos móviles */
+
     }
+
+    /* Sección de Servicios en dispositivos móviles */
+    .servicios {
+        padding: 15px;
+    }
+
+}
+
+/* Sección de Testimonios */
+.testimonios {
+    padding: 20px;
+    background-color: #fff;
+    margin: 20px auto;
+    max-width: 800px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+.testimonios h2 {
+    text-align: center;
+    color: #333;
+}
+
+.testimonial {
+    margin: 15px 0;
+    padding: 10px;
+    border-left: 4px solid #add8e6;
+    background-color: #f9f9f9;
+}
+
+.testimonial p {
+    font-style: italic;
+    color: #555;
+}
+
+.testimonial span {
+    display: block;
+    text-align: right;
+    color: #333;
+    margin-top: 5px;
 }
