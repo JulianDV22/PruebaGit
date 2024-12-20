@@ -105,6 +105,7 @@ body {
         max-height: 0; /* Oculto */
         overflow: hidden;
         width: 100%;
+
     }
 
     /* Mostrar la lista de navegación cuando está activa */
@@ -116,6 +117,28 @@ body {
     .nav-item a {
         text-align: left;
         padding: 10px 20px;
+
+    }
+
+    /* Mostrar la lista de navegación cuando está activa */
+    .nav-list.active {
+        max-height: 500px; /* Valor suficientemente grande para mostrar todos los elementos */
+    }
+
+    /* Ajustar elementos de navegación */
+    .nav-item a {
+        text-align: left;
+        padding: 10px 20px;
+    }
+
+    /* Sección de Servicios en dispositivos móviles */
+    .servicios {
+        padding: 15px;
+    }
+
+    .servicios.active {
+        /* Opcional: agregar estilos adicionales para dispositivos móviles */
+
     }
 
     /* Sección de Servicios en dispositivos móviles */

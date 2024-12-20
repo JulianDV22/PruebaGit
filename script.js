@@ -74,9 +74,12 @@ document.addEventListener('DOMContentLoaded', () => {
         console.error('No se encontraron los elementos necesarios para la funcionalidad de Servicios e Inicio.');
     }
 
+
     document.querySelectorAll('.testimonial').forEach(item => {
         item.addEventListener('click', () => {
             alert('Gracias por tu interés en nuestros testimonios!');
         });
     });
 });
+
+
