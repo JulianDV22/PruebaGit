@@ -16,6 +16,17 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
+    // Funcionalidad para el Inicio de Sesión
+    const loginForm = document.querySelector('#login form');
+    
+    if (loginForm) {
+        loginForm.addEventListener('submit', (event) => {
+                event.preventDefault();
+                alert('Inicio de sesión exitoso (simulado).'); //el inicio de sesión siempre será exitoso
+                loginForm.reset(); // Limpia los campos del formulario
+        });
+    }
+
     // Funcionalidad para el menú hamburguesa
     const navToggle = document.querySelector('.nav-toggle');
     const navList = document.querySelector('.nav-list');
