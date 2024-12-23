@@ -268,3 +268,76 @@ body {
         gap: 10px;
     }
 }
+
+/* Sección de Inicio de Sesión */
+.login {
+    padding: 20px;
+    background-color: #fff;
+    max-width: 400px;
+    margin: 20px auto;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+}
+
+.login h2 {
+    text-align: center;
+    color: #333;
+}
+
+.login form {
+    display: flex;
+    flex-direction: column;
+}
+
+.login label {
+    margin: 10px 0 5px;
+    color: #555;
+}
+
+.login input {
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.login button {
+    padding: 10px;
+    color: #fff;
+    background-color: #333;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.login button:hover {
+    background-color: #555;
+}
+
+/* Sección de Información General */
+.info-general {
+    padding: 20px;
+    margin: 20px auto;
+    background-color: #fff; /* Fondo blanco */
+    max-width: 800px; /* Ancho máximo */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Sombra suave */
+    border-left: 5px solid #add8e6; /* Línea azul en el lado izquierdo */
+    border-radius: 8px; /* Bordes redondeados */
+}
+
+/* Título Principal: Datos Curiosos */
+.info-general h2 {
+    text-align: center; /* Centramos el texto */
+    font-size: 28px;
+    color: #333;
+    margin-bottom: 15px; /* Separación inferior */
+}
+
+/* Subtítulo: ¿Qué es Git? */
+.info-general h3 {
+    font-size: 22px;
+    color: #555;
+    margin: 10px 0; /* Margen superior e inferior */
+    text-align: left; /* Alineación a la izquierda */
+}
+
