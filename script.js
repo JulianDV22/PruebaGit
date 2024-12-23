@@ -26,7 +26,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 loginForm.reset(); // Limpia los campos del formulario
         });
     }
-
+  
     // Funcionalidad para el menú hamburguesa
     const navToggle = document.querySelector('.nav-toggle');
     const navList = document.querySelector('.nav-list');
